@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="game-box">
+            <div class="game-header">
+                <i class="fas fa-gamepad"></i>
+                <h1>Number Guessing Game</h1>
+            </div>
+            <div class="game-content">
+                <div id="setup-phase">
+                    <div class="input-group">
+                        <i class="fas fa-calculator"></i>
+                        <p>Enter the maximum number for the game:</p>
+                        <input type="number" id="maxNumber" min="1" placeholder="Enter max number">
+                    </div>
+                    <button id="startGame">
+                        <i class="fas fa-play"></i>
+                        Start Game
+                    </button>
+                </div>
+                <div id="game-phase" style="display: none;">
+                    <div class="input-group">
+                        <i class="fas fa-question-circle"></i>
+                        <p>Guess the number between 1 and <span id="maxDisplay"></span></p>
+                        <input type="number" id="guessInput" placeholder="Enter your guess">
+                    </div>
+                    <div class="button-group">
+                        <button id="submitGuess">
+                            <i class="fas fa-check"></i>
+                            Submit Guess
+                        </button>
+                        <button id="quitGame">
+                            <i class="fas fa-times"></i>
+                            Quit Game
+                        </button>
+                    </div>
+                    <div class="message-container">
+                        <p id="message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
